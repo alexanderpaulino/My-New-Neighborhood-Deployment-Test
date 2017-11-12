@@ -1,0 +1,201 @@
+img {
+  max-width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.row {
+  outline: black;
+}
+
+
+
+
+
+/*if ({weatherStats.weatherIcon} === "01d") {
+                        $("#icon").addClass("sunny");
+                    } else if ({weatherStats.weatherIcon} === "01n") {
+                        $("#icon").addClass("clearNight");
+                    } else if ({weatherStats.weatherIcon} === "02d") {
+                        $("#icon").addClass("partlyCloudyDay");
+                    } else if ({weatherStats.weatherIcon} === "02n") {
+                        $("#icon").addClass("partlyCloudyNight");
+                    } else if ({weatherStats.weatherIcon} === "03d" || {weatherStats.weatherIcon} === "03n" || {weatherStats.weatherIcon} === "04d" || {weatherStats.weatherIcon} === "04n") {
+                        $("#icon").addClass("cloudy");
+                    } else if ({weatherStats.weatherIcon} === "09d" || {weatherStats.weatherIcon} === "09n") {
+                        $("#icon").addClass("lightRain");
+                    } else if ({weatherStats.weatherIcon} === "10d" || {weatherStats.weatherIcon} === "10n") {
+                        $("#icon").addClass("rain");
+                    } else if ({weatherStats.weatherIcon} === "11d" || {weatherStats.weatherIcon} === "11n") {
+                        $("#icon").addClass("thunderstorm");
+                    } else if ({weatherStats.weatherIcon} === {weatherStats.weatherIcon} === "13d" || {weatherStats.weatherIcon} === "13n") {
+                        $("#icon").addClass("snow");
+                    } else if ({weatherStats.weatherIcon} === "50d" || {weatherStats.weatherIcon} === "50n") {
+                        $("#icon").addClass("fog");
+            }}*/
+.text-center {
+  text-align: center;
+}
+
+/* .icon{
+      height:100px;
+      width:110px;
+      margin:0 auto;
+  }*/
+
+  #weather-description{
+    padding:4px 0;
+    text-transform:capitalize;
+  }
+
+  .other-weather-info{
+    padding-left:30px;
+  }
+
+  /* Begin Weather Icon Classes*/
+[class="01d"]  {
+      background-image: url("../../images/weather-icons.png");
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -45px -25px; 
+    }
+
+[class="01n"]{
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -78px -99px; 
+  }
+
+[class="02d"]  {
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -77px -25px; 
+    }
+
+[class="02n"] {
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -111px -25px; 
+  }
+
+[class="03d"], [class="03n"], [class="04d"], [class="04n"]{
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -13px -25px; 
+  }
+
+[class="09d"]{
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -144px -25px; 
+  }
+
+  [class="09n"]{
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -144px -62px; 
+  }
+
+[class="13d"], [class="13n"]  {
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -78px -62px; 
+
+  }
+  
+[class="10d"]  {
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -45px -62px; 
+  }
+
+[class="10n"]  {
+    background-image: url('../../images/weather-icons.png');
+    background-size: 500%;
+    height:40px;
+    width:40px;
+    margin:0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: -45px -62px; 
+}
+
+[class="11d"], [class="11n"] {
+      background-image: url('../../images/weather-icons.png');
+      background-size: 500%;
+      height:40px;
+      width:40px;
+      margin:0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: -14px -62px; 
+  }
+
+[class="50d"], [class="50n"]{
+    background-image: url('../../images/weather-icons.png');
+    background-size: 500%;
+    height:40px;
+    width:40px;
+    margin:0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: -45px -96px; 
+  }
+
+  /* End Weather Icon Classes*/
