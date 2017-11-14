@@ -97,6 +97,9 @@ class Home extends Component {
       API.getEvents(this.state.zipCode)
       
       .then(res => {
+       
+       console.log(res.data);
+
        for (let i=0;i<10;i++) {
 
         if(res.data.length !== 0 && res.data[i] !== undefined && res.data[i].name.text !== null && res.data[i].logo !== null && res.data[i].description.text !== null){
@@ -104,7 +107,7 @@ class Home extends Component {
            let eventObject = {            
              EBname: res.data[i].name.text,
              EBdescription: (res.data[i].description.text.substring(0, 220)+"..."),
-             EBimage: res.data[i].logo.url,
+             EBimage: res.data[i].logo.original.url,
              EBlink: res.data[i].url,
            }
 

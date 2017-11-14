@@ -19,6 +19,3 @@ export const EventListItem = props => (
     </div>
  
 );
-
-
-// <h4>{props.description.substring(0, 220)+"..."}</h4>

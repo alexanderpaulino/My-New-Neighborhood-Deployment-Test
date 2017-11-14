@@ -280,7 +280,8 @@ p {
 }
 
 .overflowHidden {
-    overflow:hidden;
+    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -533,4 +534,3 @@ h2 {
 .container-nav {
     height:100px
 }
-/*End of Index Styling*/

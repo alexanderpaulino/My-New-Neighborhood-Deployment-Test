@@ -13,7 +13,6 @@ const Info = (props) => {
 
     return (
 
-<div className={"overflowHidden"}>
     <Container>
 
 
@@ -88,12 +87,13 @@ const Info = (props) => {
 
 </div>
 </Row>
-   <div className="bottom-border centerContent">
 
-         <Row>
+  <div className="bottom-border centerContent">
+    
+
         <Col size="lg-12">
 
-          <SchoolList> 
+          <SchoolList>
                 {props.Sdata.map(schools => {
                    return(
                    <SchoolListItem
@@ -114,12 +114,13 @@ const Info = (props) => {
 
 
         </Col>
- </Row>
+      
+  </div>
 
-          <Row>
+  <div className="bottom-border centerContent">
+      
           <Col size="lg-12 md-12 sm-12 xs-12">
 
-          <div>
             <EventList>
             {props.EBdata.map(event => {
                return(
@@ -136,13 +137,12 @@ const Info = (props) => {
 
             </EventList> 
 
-            </div>
             </Col>
-            </Row>
-          </div>
+        
+    </div>
 
-    <div className="bottom-border centerContent">
-             <Row>
+        <div  className="bottom-border centerContent">
+          
              <Col size="lg-12 md-12 sm-12 xs-12">
              <h2 className="marginTopBot">Things to Do - From Yelp</h2>
          
@@ -164,11 +164,11 @@ const Info = (props) => {
                   )}
                 </YelpThingsList>
                 </Col>
-                </Row>
-           </div>     
+            
+          </div>
 
     <div className="bottom-border centerContent">
-      <Row>
+
         <Col size="lg-12 md-12 sm-12 xs-12">
 
         <h2 className="marginTopBot">Most Popular Restaurants - From Yelp</h2>
@@ -190,10 +190,11 @@ const Info = (props) => {
                 </YelpRestaurantsList>
 
           </Col>
-  </Row>
+    
+  </div>
 
   <div className="bottom-border centerContent">
-      <Row>
+
         <Col size="lg-12 md-12 sm-12 xs-12">
 
         <h2 className="marginTopBot">Ready to Move? Check out these moving companies</h2>
@@ -216,15 +217,11 @@ const Info = (props) => {
                 </YelpMovingList>
 
         </Col>
-    </Row>
 
     </div>
 
-</div>
-
   </Container>
 
-  </div>
   );
 }
 
