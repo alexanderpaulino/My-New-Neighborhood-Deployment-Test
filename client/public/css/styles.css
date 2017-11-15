@@ -534,3 +534,44 @@ h2 {
 .container-nav {
     height:100px
 }
+
+
+@media (max-width: 991px) {
+
+    .card {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .card {
+        width: 55%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .card {
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .col-md-3 {
+        width: 70%;
+    }
+
+}
