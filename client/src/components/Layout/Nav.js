@@ -317,7 +317,7 @@ export default class Nav extends React.Component {
                 Login</button>
               </form>
               <hr></hr>
-              <p id="errorMessage" className={this.state.loginError ? '' : 'hidden'}>Please enter valid account credentials.</p>
+              <p id="errorMessage" className={this.state.loginError ? '' : 'hidden'}>Incorrect Username/Password. Please enter valid account credentials.</p>
             </div>
           </Modal>
           
