@@ -70,7 +70,7 @@ export default class Nav extends React.Component {
 
   componentDidMount() {
     axios.get('/auth/user').then(response => {
-      
+      console.log(response)
       if (!!response.data.user) {
         console.log('A user is currently logged in')
         this.setState({
@@ -230,6 +230,7 @@ export default class Nav extends React.Component {
         password
       })
       .then(response => {
+        console.log(response)
         if (response.status === 200) {
           this.setState({
             loggedIn: true,
