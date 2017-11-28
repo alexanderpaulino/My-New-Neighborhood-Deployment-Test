@@ -37,6 +37,10 @@ router.post('/login', (req, res, next) => {
 			delete cleanUser.local.password
 		}
 		res.json({ user: cleanUser })
+		.catch((status, err) => {
+			console.log("Error:");
+			console.log(err)
+		});
 	}
 )
 
@@ -52,7 +56,7 @@ router.post('/logout', (req, res) => {
 
 router.post('/signup', (req, res) => {
 	const { username, password, email, name, age } = req.body
-	// ADD VALIDATION
+
 	User.findOne({ 'local.username': username }, (err, emailMatch) => {
 		if (emailMatch) {
 			return res.json({
