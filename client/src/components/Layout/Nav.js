@@ -230,7 +230,6 @@ export default class Nav extends React.Component {
         password
       })
       .then(response => {
-        console.log(response)
         if (response.status === 200) {
           this.setState({
             loggedIn: true,
@@ -244,7 +243,7 @@ export default class Nav extends React.Component {
             usernameLogin: "",
             passwordLogin: ""
           })
-        } else if (response.status === 400) {
+        } else {
           this.setState({
             loginError: true
           })

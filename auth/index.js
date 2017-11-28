@@ -28,7 +28,7 @@ router.post('/login', (req, res, next) => {
 		console.log('========Pre-Authentication=========')
 		next()
 	},
-	passport.authenticate('local'), (req, res) => {
+	passport.authenticate('local'), (err, req, res) => {
 		console.log('POST to /login')
 		const user = JSON.parse(JSON.stringify(req.user)) // hack
 		const cleanUser = Object.assign({}, user)
@@ -36,11 +36,10 @@ router.post('/login', (req, res, next) => {
 			console.log(`Deleting ${cleanUser.local.password}`)
 			delete cleanUser.local.password
 		}
+		if (err) {
+			return (res.json(err))
+		}
 		res.json({ user: cleanUser })
-		.catch((status, err) => {
-			console.log("Error:");
-			console.log(err)
-		});
 	}
 )
 
@@ -56,9 +55,9 @@ router.post('/logout', (req, res) => {
 
 router.post('/signup', (req, res) => {
 	const { username, password, email, name, age } = req.body
-
-	User.findOne({ 'local.username': username }, (err, emailMatch) => {
-		if (emailMatch) {
+	// ADD VALIDATION
+	User.findOne({ 'local.username': username }, (err, userMatch) => {
+		if (userMatch) {
 			return res.json({
 				error: `Sorry, already a user with that username: ${username}`
 			})
