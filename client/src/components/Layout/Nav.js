@@ -171,14 +171,15 @@ export default class Nav extends React.Component {
           modal2IsOpen: false
         })
       } else {
+        console.log('Duplicate Username found.')
         this.setState({
-          loginError: true,
           usernameError: false,
-          duplicateError: false,
+          duplicateError: true,
           passwordError: false,
           emailError: false,
           ageError: true
           })
+        return false;
        }
     })
   }
@@ -242,7 +243,7 @@ export default class Nav extends React.Component {
             usernameLogin: "",
             passwordLogin: ""
           })
-        } else {
+        } else if (response.status === 400) {
           this.setState({
             loginError: true
           })
