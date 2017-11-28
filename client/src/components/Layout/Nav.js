@@ -243,7 +243,10 @@ export default class Nav extends React.Component {
             usernameLogin: "",
             passwordLogin: ""
           })
-        } else {
+        }
+      })
+      .catch(error => {
+        if (error.response.status) {
           this.setState({
             loginError: true
           })
